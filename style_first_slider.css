@@ -1,0 +1,158 @@
+.container {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+body {background-color: #333;}
+
+.controls-slides {
+    display: none;
+}
+
+#control-1:checked ~ .arrows .controls-slide1 {
+    display: block;
+}
+
+#control-2:checked ~ .arrows .controls-slide2 {
+    display: block;
+}
+#control-3:checked ~ .arrows .controls-slide3 {
+    display: block;
+}
+#control-4:checked ~ .arrows .controls-slide4 {
+    display: block;
+}
+
+input {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+input::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #efefef;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+input:checked {
+    background-color: #efefef;
+}
+
+#control-1 {
+    left: 45%;
+}
+#control-2 {
+    left: 49%
+}
+#control-3 {
+    left: 53%;
+}
+#control-4 {
+    left: 57%;
+}
+
+.slides {
+    height: inherit; /* Унаследовать*/
+    width: 3200px;
+    transition: all 1s ease-in-out;
+}
+
+.slide {
+    display: inline-block;
+    height: inherit; /* Унаследовать*/
+    background-repeat: no-repeat;
+    background-position: 0 70%;
+    background-size: 100%;
+    width: 800px;
+    margin-right: -4px;
+}
+
+
+.slide-1 {
+    background-image: url(https://preview.redd.it/whats-the-greatest-your-favorite-mac-wallpaper-of-all-time-v0-70pl0q2hv66d1.jpeg?auto=webp&s=07466255de47a595499c421ebc49e884e1c4f6a7);
+}
+.slide-2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg1BOkVjXVN6bBKMT7MAOV9lKLXqJLSE_f8Q&s);
+}
+.slide-3 {
+    background-image: url(https://avatars.mds.yandex.net/i?id=38c36cdb8876e7ed18c39d8abee333b66212f74d-7132066-images-thumbs&n=13);
+}
+
+.slide-4 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfRlzG0ZD92p2uRFl6oomp_YEUFJBgYq8zCg&s);
+}
+
+#control-1 {
+    transition: all 0.3s ease-in-out;
+}
+#control-2 {
+    transition: all 0.3s ease-in-out;
+}
+#control-3 {
+    transition: all 0.3s ease-in-out;
+}
+#control-4 {
+    transition: all 0.3s ease-in-out;
+}
+
+#control-1:checked ~ .slides {
+    transform: translateX(0px);
+}
+#control-2:checked ~ .slides {
+    transform: translateX(-25%);
+}
+#control-3:checked ~ .slides {
+    transform: translateX(-50%);
+} 
+#control-4:checked ~ .slides {
+    transform: translateX(-75%);
+} 
+
+.arrow {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+
+.arrow-right {
+    right: 22px;
+    transform-origin: left 50px;
+}
+.arrow-left {
+    left: 22px;
+    transform-origin: right 50px;
+}
+
+.arrow:hover {
+    transform: scale(1.5);
+    color: rgb(236, 223, 172);
+}
+
+.arrow-right:checked .slides {
+    transform: translateX(-25%);
+}
