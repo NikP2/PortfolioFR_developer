@@ -1,0 +1,361 @@
+:root {
+    --fonts-for-slide: "Roboto Slab";
+    --fonts-for-slide-bold: "Archivo Black";
+}
+
+
+body {
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.controls-slides{
+    display: none;
+}
+
+#check-1:checked ~ .arrows .controls-slide1 {
+    display: block;
+}
+
+#check-2:checked ~ .arrows .controls-slide2 {
+    display: block;
+}
+
+#check-3:checked ~ .arrows .controls-slide3 {
+    display: block;
+}
+
+#check-4:checked ~ .arrows .controls-slide4 {
+    display: block;
+}
+
+#check-5:checked ~ .arrows .controls-slide5 {
+    display: block;
+}
+
+
+
+
+.slides {
+    height: inherit;
+    width: 4000px;
+    transition: all 0.5s ease-in-out;
+}
+
+.slide {
+    display: inline-block;
+    height: inherit; /* Унаследовать */
+    width: 800px;
+    margin-right: -4.5px;
+    transition: 0.5s;
+}
+
+
+.slide-1 {
+    background-color: rgb(60, 177, 66);
+}
+.slide-2 {
+    background-color: rgb(177, 60, 60);
+}
+.slide-3 {
+    background-color: rgb(6, 217, 236);
+}
+.slide-4 {
+    background-color: rgb(12, 12, 184);
+}
+.slide-5 {
+    background-color: rgb(157, 60, 177);
+}
+
+
+#check-1:checked ~ .slides {
+    transform: translateX(0px);
+}
+#check-2:checked ~ .slides {
+    transform: translateX(-20%);
+}
+#check-3:checked ~ .slides {
+    transform: translateX(-40%);
+}
+#check-4:checked ~ .slides {
+    transform: translateX(-60%);
+}
+#check-5:checked ~ .slides {
+    transform: translateX(-80%);
+}
+
+input {
+    position: absolute;
+    left: 50%;
+    bottom:10px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    appearance: none;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+input::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+input:checked {
+    background-color: white;
+    width: 13px;
+    height: 13px;
+}
+
+
+.slide-1 i {
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 9%;
+    transform: translate(-9%, -50%);
+}
+
+.slide-1 h1 {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 1%;
+    transform: translateX(-1%);
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-1 p {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 1.05%;
+    transform: translateX(-1.05%);
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-1 h2 {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 18%;
+    font-weight: 900;
+    transform: translateX(-18%);
+    font-family: var(--fonts-for-slide-bold);
+}
+
+
+.slide-2 i {
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 29%;
+    transform: translate(-29%, -50%);
+}
+
+.slide-2 h1 {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 21%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-2 p {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 21.05%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-2 h2 {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 38%;
+    font-weight: 900;
+    transform: translateX(-18%);
+    font-family: var(--fonts-for-slide-bold);
+}
+
+.slide-3 i {
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slide-3 h1 {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 41%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-3 p {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 41.05%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-3 h2 {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 58%;
+    font-weight: 900;
+    transform: translateX(-18%);
+    font-family: var(--fonts-for-slide-bold);
+}
+
+.slide-4 i {
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 70.5%;
+    transform: translate(-70.5%, -50%);
+}
+
+.slide-4 h1 {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 61%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-4 p {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 61.05%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-4 h2 {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 78%;
+    font-weight: 900;
+    transform: translateX(-18%);
+    font-family: var(--fonts-for-slide-bold);
+}
+
+.slide-5 i {
+    position: absolute;
+    font-size: 100px;
+    top: 50%;
+    left: 91.5%;
+    transform: translate(-91.5%, -50%);
+}
+
+.slide-5 h1 {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 81%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-5 p {
+    color: white;
+    position: absolute;
+    font-size: 15px;
+    top: 60px;
+    left: 81.05%;
+    font-family: var(--fonts-for-slide);
+}
+
+.slide-5 h2 {
+    color: white;
+    position: absolute;
+    top: 25px;
+    left: 98%;
+    font-weight: 900;
+    transform: translateX(-18%);
+    font-family: var(--fonts-for-slide-bold);
+}
+
+
+#check-1 {
+    left: 44%;
+}
+#check-2 {
+    left: 47%;
+}
+#check-3 {
+    left: 50%;
+}
+#check-4 {
+    left: 53%;
+}
+#check-5 {
+    left: 56%;
+}
+
+.arrow {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.arrow-right {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+    right: 22px;
+    transform-origin: left 50px;
+}
+
+.arrow-left {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    left: 10px;
+    transform-origin: right 50px;
+    border-radius: 5px;
+}
+
+.arrow:hover {
+    color: black;
+    background-color: (255, 255, 255, 1);
+}
+
+
+.arrow-right:checked .slides {
+    transform: translateX(-25%);
+}
